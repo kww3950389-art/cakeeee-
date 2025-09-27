@@ -1,0 +1,281 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic);
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #ee9ca7;
+}
+
+#cake {
+  display: block;
+  position: relative;
+  margin: -10em auto 0 auto;
+}
+@import url('https://fonts.googleapis.com/css?family=Lato:300italic');
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: #ee9ca7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+}
+
+#cake {
+  position: relative;
+  width: 250px; /* Можно подстроить размер */
+  height: 150px;
+  background: #f2c6c9; /* Цвет торта */
+  border-radius: 20px 20px 10px 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 50px;
+}
+
+/* ============================================== Candle */
+.velas {
+  background: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  margin-left: -2.4px; /* Центрируем по ширине свечи (ширина 5px) */
+  width: 5px;
+  height: 35px;
+  backface-visibility: hidden;
+  animation: in 500ms 0.5s ease-out forwards;
+}
+
+/* Добавим полоски красного */
+.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.2px;
+}
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+
+/* ============================================== Fire */
+.fuego {
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -2.6px;
+  width: 6.66666667px;
+  height: 18px;
+  background: rgba(254, 248, 97, 0.5);
+  box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+  animation: fuego 2s 1s infinite;
+}
+.fuego:nth-child(2) {
+  animation-duration: 1.5s;
+  background: rgba(255, 200, 50, 0.6);
+}
+.fuego:nth-child(3) {
+  animation-duration: 1s;
+  background: rgba(255, 150, 0, 0.7);
+}
+.fuego:nth-child(4) {
+  animation-duration: 0.5s;
+  background: rgba(255, 100, 0, 0.8);
+}
+.fuego:nth-child(5) {
+  animation-duration: 0.2s;
+  background: rgba(255, 50, 0, 0.9);
+}
+
+/* ============================================== Animation Fire */
+@keyframes fuego {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    background: rgba(254, 248, 97, 0.5);
+  }
+  50% {
+    transform: translateY(-20px) scale(0);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    background: rgba(255, 50, 0, 0.1);
+  }
+}
+
+@keyframes in {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.text {
+  color: #8b6a60;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.4em;
+}
+/* ============================================== Candle
+*/
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: #fefae9; /* или любой фон */
+}
+
+.cake-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.velas {
+    position: absolute;
+    top: calc(50% - 280px); /* подстрой по необходимости */
+    display: flex;
+    gap: 5px;
+}
+
+#cake {
+    z-index: 1;
+}
+
+.velas {
+  background: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  top: 228px;
+  left: 50%;
+  margin-left: -2.4px;
+  margin-top: -8.33333333px;
+  width: 5px;
+  height: 35px;
+  transform: translateY(-300px);
+  backface-visibility: hidden;
+  animation: in 500ms 6s ease-out forwards;
+}
+.velas:after,
+.velas:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.22222222px;
+}
+.velas:after {
+  top: 25%;
+  left: 0;
+}
+.velas:before {
+  top: 45%;
+  left: 0;
+}
+
+/* ============================================== Fire
+*/
+
+.fuego {
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -2.6px;
+  width: 6.66666667px;
+  height: 18px;
+}
+.fuego:nth-child(1) {
+  animation: fuego 2s 6.5s infinite;
+}
+.fuego:nth-child(2) {
+  animation: fuego 1.5s 6.5s infinite;
+}
+.fuego:nth-child(3) {
+  animation: fuego 1s 6.5s infinite;
+}
+.fuego:nth-child(4) {
+  animation: fuego 0.5s 6.5s infinite;
+}
+.fuego:nth-child(5) {
+  animation: fuego 0.2s 6.5s infinite;
+}
+
+/* ============================================== Animation Fire
+*/
+
+@keyframes fuego {
+  0%,
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    transform: translateY(-20px) scale(0);
+  }
+}
+
+@keyframes in {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.text {
+  color: #8b6a60;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  h1 {
+    font-size: 1.4em;
+  }
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* высота экрана */
+    display: flex;
+    justify-content: center; /* по горизонтали */
+    align-items: center;     /* по вертикали */
+    flex-direction: column;  /* чтобы торт и текст шли друг под другом */
+    background-color: #fff;  /* или другой фон по вкусу */
+}
+
+.text {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+}
+
+.text h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.text p {
+    font-size: 1.5em;
+    margin: 5px 0 0 0;
+}
